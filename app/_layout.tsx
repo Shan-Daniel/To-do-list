@@ -5,6 +5,9 @@ import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { FirestoreTaskProvider } from './FirestoreTaskContext';
+import { AuthProvider } from './AuthContext';
+import AuthWrapper from './AuthWrapper';
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -19,10 +22,16 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <AuthProvider>
+        <AuthWrapper>
+          <FirestoreTaskProvider>
+            <Stack>
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen name="+not-found" />
+            </Stack>
+          </FirestoreTaskProvider>
+        </AuthWrapper>
+      </AuthProvider>
       <StatusBar style="auto" />
     </ThemeProvider>
   );

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "todo-list-app",
-    "slug": "todo-list-app",
+    "name": "ToDoList",
+    "slug": "to-do-list",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,19 +9,42 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shandaniel.todolist",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.YOUR_REVERSED_CLIENT_ID"
+        }
+      }
     },
     "android": {
+      "package": "com.shandaniel.todolist",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyC3H-6ywaItrGwvvnvhF8oMQErHgA50gbg",
+          "authDomain": "list-c5dcd.firebaseapp.com",
+          "projectId": "list-c5dcd",
+          "storageBucket": "list-c5dcd.appspot.com",
+          "messagingSenderId": "930813865029",
+          "appId": "1:930813865029:web:8500635318e26645f7c72c",
+          "measurementId": "G-SHZD2K0WG9"
+        },
+        "googleSignIn": {
+          "clientId": "708452970427-p07ing4m59pv49gqg0qlvc1df68b10vd.apps.googleusercontent.com"
+        }
+      }
     },
     "plugins": [
       "expo-router",
@@ -37,6 +60,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "expoClientId": "708452970427-p07ing4m59pv49gqg0qlvc1df68b10vd.apps.googleusercontent.com",
+      "androidClientId": "930813865029-o00m2lt89ju437uegaq23fbe90jjanh5.apps.googleusercontent.com",
+      "iosClientId": "YOUR_IOS_CLIENT_ID.apps.googleusercontent.com"
     }
   }
 }

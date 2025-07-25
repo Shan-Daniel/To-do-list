@@ -49,6 +49,8 @@ Join our community of developers creating universal apps.
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 
+video link- https://drive.google.com/drive/folders/1TwVWKY_5cXOfOLN1q8J_5sAdB82qPhJw
+
 
 “This project is a part of a hackathon run by
 https://www.katomaran.com ”
